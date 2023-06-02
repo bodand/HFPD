@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "HFPD", "HFPD\HFPD.fsproj", "{329FCD40-9D7A-4AE4-9AFE-EFA83E9B64A7}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "libHF", "libHF\libHF.fsproj", "{8EB4939A-AC39-4205-9DBF-EF5E64CDD774}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "libHFTests", "libHFTests\libHFTests.fsproj", "{4750E722-54FF-40FA-821C-8AC14B95419A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{329FCD40-9D7A-4AE4-9AFE-EFA83E9B64A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{329FCD40-9D7A-4AE4-9AFE-EFA83E9B64A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{329FCD40-9D7A-4AE4-9AFE-EFA83E9B64A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{329FCD40-9D7A-4AE4-9AFE-EFA83E9B64A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EB4939A-AC39-4205-9DBF-EF5E64CDD774}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EB4939A-AC39-4205-9DBF-EF5E64CDD774}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EB4939A-AC39-4205-9DBF-EF5E64CDD774}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EB4939A-AC39-4205-9DBF-EF5E64CDD774}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4750E722-54FF-40FA-821C-8AC14B95419A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4750E722-54FF-40FA-821C-8AC14B95419A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4750E722-54FF-40FA-821C-8AC14B95419A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4750E722-54FF-40FA-821C-8AC14B95419A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
