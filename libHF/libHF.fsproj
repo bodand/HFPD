@@ -6,7 +6,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <Compile Include="Common\IPrettyPrintable.fs" />
+        <Compile Include="Submissions\Neptun.fs" />
         <Compile Include="Submissions\Submitter.fs" />
         <Compile Include="Submissions\Submission.fs" />
     </ItemGroup>
