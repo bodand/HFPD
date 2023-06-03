@@ -3,17 +3,16 @@
 open libHF.Student
 
 /// <summary>
-/// Simple class joining together a human name and a Neptun object
-/// for a given Submitter.
+/// Simple class wrapping a Student who has submitted something.
 /// </summary>
-type Submitter(name: string, neptun: Neptun) =
+type Submitter(who: Student) =
     /// <summary>
     /// The human name of the Submitter.
     /// </summary>
-    member val Name = name with get, set
+    member val Name = who.name with get, set
     /// <summary>
     /// The Neptun code of the Submitter.
     /// Guaranteed to be at least syntactically valid.
     /// </summary>
     /// <seealso cref="libHF.Submissions.Neptun"/>
-    member val Neptun = neptun with get, set
+    member val Neptun = who.neptun with get, set

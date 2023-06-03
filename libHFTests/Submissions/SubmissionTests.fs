@@ -8,7 +8,11 @@ open libHF.Submissions
 open libHF.Submissions.Submission
 
 module SubmissionTests =
-    let subm = Submitter("Teszt Béla", Neptun("AABBCC"))
+    let subm =
+        Submitter(
+            { name = "Teszt Béla"
+              neptun = Neptun("AABBCC") }
+        )
 
     [<Fact>]
     let ``Submission can be constructed with parameters`` () =
@@ -52,4 +56,4 @@ module SubmissionTests =
         let sut = Submission.Make subm List.Empty
         sut.Accept "Reasoning" 42
 
-        Assert.Equal(Accepted ("Reasoning", 42), sut.Status)
+        Assert.Equal(Accepted("Reasoning", 42), sut.Status)
