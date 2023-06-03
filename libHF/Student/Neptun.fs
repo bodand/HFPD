@@ -52,6 +52,8 @@ module private Neptun =
 /// </para>
 /// </remarks>
 [<Struct>]
+[<CustomComparison>]
+[<CustomEquality>]
 type Neptun =
     /// <summary>
     /// The value of the Neptun object.
@@ -61,6 +63,17 @@ type Neptun =
     /// This string always contains an at least syntactically valid NEPTUN code.
     /// </remarks>
     val value: string
+
+    interface IComparable with
+        member this.CompareTo(obj) =
+            match obj with
+            | :? Neptun as n -> this.value.CompareTo(n.value)
+            | :? string as s -> this.value.CompareTo(String.map Char.ToUpper s)
+            | _ -> 1
+
+    override this.Equals(obj) = (this :> IComparable).CompareTo(obj) = 0
+    
+    override this.GetHashCode() = hash this.value
 
     /// <summary>
     /// Checks and possibly wraps a string in a Neptun object.

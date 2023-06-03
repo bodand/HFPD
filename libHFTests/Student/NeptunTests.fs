@@ -46,3 +46,29 @@ module NeptunTests =
     let ``Neptun codes are uppercase if input is mixed-case`` () =
         let sut = Neptun "Ab34Ef"
         Assert.Equal(sut.value, "AB34EF")
+
+    [<Fact>]
+    let ``Neptun object has the same hash as its string`` () =
+        let sut = Neptun "Ab34Ef"
+        Assert.Equal("AB34EF".GetHashCode(), sut.GetHashCode())
+
+    [<Fact>]
+    let ``Neptun object compares before unknown types`` () =
+        let sut = Neptun "Ab34Ef" :> IComparable
+        Assert.Equal(1, sut.CompareTo(2))
+
+    [<Theory>]
+    [<InlineData("ABCDEF", "ABCDEF", 0)>]
+    [<InlineData("ABCDEF", "FEDCBA", 1)>]
+    [<InlineData("FEDCBA", "ABCDEF", -1)>]
+    let ``Neptun object compares with strings`` str neptun res =
+        let sut = Neptun neptun :> IComparable
+        Assert.Equal(res, sut.CompareTo(str))
+
+    [<Theory>]
+    [<InlineData("ABCDEF", "ABCDEF", 0)>]
+    [<InlineData("ABCDEF", "FEDCBA", 1)>]
+    [<InlineData("FEDCBA", "ABCDEF", -1)>]
+    let ``Neptun object compares with other Neptun objects`` str neptun res =
+        let sut = Neptun neptun :> IComparable
+        Assert.Equal(res, sut.CompareTo(Neptun str))

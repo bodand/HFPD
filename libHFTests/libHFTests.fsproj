@@ -10,6 +10,7 @@
 
     <ItemGroup>
         <Compile Include="Student\NeptunTests.fs" />
+        <Compile Include="Student\StudentTests.fs" />
         <Compile Include="Submissions\SubmitterTests.fs" />
         <Compile Include="Submissions\SubmissionTests.fs" />
         <Compile Include="Submissions\GradingTests.fs" />

@@ -11,10 +11,8 @@ open libHFTests
 
 module HomeworkTests =
     let students =
-        [ { name = "John"
-            neptun = Neptun "UVWXYZ" }
-          { name = "Foo Bar"
-            neptun = Neptun "123456" } ]
+        [ Student("John", Neptun "UVWXYZ")
+          Student("Foo Bar", Neptun "123456") ]
 
     let grading = [ PointGuideline("OO design", 2); ErrataGuideline("typecheck", 4) ]
     let bad_grading = [ PointGuideline("OO design", -2) ]
@@ -42,14 +40,26 @@ module HomeworkTests =
 
         let sub =
             Submission.Make
-                (Submitter
-                    { name = "John"
-                      neptun = Neptun "UVWXYZ" })
+                (Submitter(Student("John", Neptun "UVWXYZ")))
                 List.Empty
 
         hf.AddSubmission sub
 
         Assert.Contains(sub, hf.Submissions)
+
+    [<Fact>]
+    let ``Homework does not accept Submission from whom it has not been assigned`` () =
+        let hf = Homework(students, grading)
+        Assert.Empty hf.Submissions
+
+        let sub =
+            Submission.Make
+                (Submitter(Student("Timothy McEvil", Neptun "IMEVIL")))
+                List.Empty
+
+        let exc = Record.Exception(fun() -> hf.AddSubmission sub)
+        Assert.NotNull exc
+        Assert.Empty hf.Submissions        
 
     [<Fact>]
     let ``Homework constructor sets grades`` () =

@@ -10,8 +10,7 @@ open libHF.Submissions.Submission
 module SubmissionTests =
     let subm =
         Submitter(
-            { name = "Teszt Béla"
-              neptun = Neptun("AABBCC") }
+            Student("Teszt Béla", Neptun("AABBCC"))
         )
 
     [<Fact>]
