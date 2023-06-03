@@ -28,5 +28,5 @@ type GradingGuideline =
 
     member this.AllowedPoints (x: int): bool =
         match this with
-        | PointGuideline(name, max) -> 0 <= x && x <= max
-        | ErrataGuideline(name, max) -> -Math.Abs(max) <= x && x <= 0
+        | PointGuideline(_, max) -> 0 <= x && x <= max
+        | ErrataGuideline(_, max) -> -Math.Abs(max) <= x && x <= 0

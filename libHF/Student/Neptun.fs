@@ -36,7 +36,7 @@ module private Neptun =
             false
         else
             let alnums = Seq.map CharacterCheck str
-            Seq.fold (fun state elem -> state && elem) true alnums
+            Seq.reduce (&&) alnums
 
 /// <summary>The Struct representing a valid NEPTUN code.</summary>
 /// <remarks>
