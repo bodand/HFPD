@@ -1,5 +1,7 @@
 ﻿namespace libHF.Submissions
 
+open libHF.Student
+
 /// <summary>
 /// Simple class joining together a human name and a Neptun object
 /// for a given Submitter.

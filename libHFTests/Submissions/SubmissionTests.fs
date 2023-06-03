@@ -3,6 +3,7 @@
 open System
 open System.IO
 open Xunit
+open libHF.Student
 open libHF.Submissions
 open libHF.Submissions.Submission
 

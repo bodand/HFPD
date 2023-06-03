@@ -4,15 +4,14 @@
         <TargetFramework>net7.0</TargetFramework>
 
         <IsPackable>false</IsPackable>
-        <GenerateProgramFile>false</GenerateProgramFile>
+        <GenerateProgramFile>true</GenerateProgramFile>
         <IsTestProject>true</IsTestProject>
     </PropertyGroup>
 
     <ItemGroup>
-        <Compile Include="SubmitterTests.fs" />
-        <Compile Include="NeptunTests.fs" />
-        <Compile Include="SubmissionTests.fs" />
-        <Compile Include="Program.fs" />
+        <Compile Include="Student\NeptunTests.fs" />
+        <Compile Include="Submissions\SubmitterTests.fs" />
+        <Compile Include="Submissions\SubmissionTests.fs" />
     </ItemGroup>
 
     <ItemGroup>

@@ -4,6 +4,7 @@ module SubmitterTests =
 
     open System
     open Xunit
+    open libHF.Student
     open libHF.Submissions
 
     [<Fact>]

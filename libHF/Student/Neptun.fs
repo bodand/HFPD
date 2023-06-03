@@ -1,4 +1,4 @@
-﻿namespace libHF.Submissions
+﻿namespace libHF.Student
 
 open System
 

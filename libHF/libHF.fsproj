@@ -6,9 +6,10 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <Compile Include="Submissions\Neptun.fs" />
+        <Compile Include="Student\Neptun.fs" />
         <Compile Include="Submissions\Submitter.fs" />
         <Compile Include="Submissions\Submission.fs" />
+        <Folder Include="Classes\" />
     </ItemGroup>
 
 </Project>

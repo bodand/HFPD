@@ -5,7 +5,7 @@ open System
 module NeptunTests =
 
     open Xunit
-    open libHF.Submissions
+    open libHF.Student
 
     [<Theory>]
     [<InlineData("AB34EF")>]
