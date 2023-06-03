@@ -9,10 +9,11 @@
         <Compile Include="Student\Neptun.fs" />
         <Compile Include="Student\Student.fs" />
         <Compile Include="Classes\GradingGuideline.fs" />
+        <Compile Include="Submissions\Grading.fs" />
         <Compile Include="Submissions\Submitter.fs" />
         <Compile Include="Submissions\Submission.fs" />
-        <Compile Include="Submissions\Grading.fs" />
         <Compile Include="Classes\Homework.fs" />
+        <Compile Include="Classes\Class.fs" />
     </ItemGroup>
 
 </Project>
