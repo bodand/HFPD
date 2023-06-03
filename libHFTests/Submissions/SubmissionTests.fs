@@ -1,4 +1,4 @@
-﻿namespace libHFTests
+﻿namespace libHFTests.Submissions
 
 open System
 open System.IO

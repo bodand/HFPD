@@ -1,4 +1,4 @@
-﻿namespace libHFTests
+﻿namespace libHFTests.Student
 
 open System
 

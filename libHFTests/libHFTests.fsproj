@@ -13,6 +13,7 @@
         <Compile Include="Submissions\SubmitterTests.fs" />
         <Compile Include="Submissions\SubmissionTests.fs" />
         <Compile Include="Classes\GradingGuidelineTests.fs" />
+        <Compile Include="Classes\HomeworkTests.fs" />
     </ItemGroup>
 
     <ItemGroup>
