@@ -10,7 +10,7 @@
         <Compile Include="Student\Student.fs" />
         <Compile Include="Submissions\Submitter.fs" />
         <Compile Include="Submissions\Submission.fs" />
-        <Folder Include="Classes\" />
+        <Compile Include="Classes\GradingGuideline.fs" />
     </ItemGroup>
 
 </Project>
