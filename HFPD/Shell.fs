@@ -11,21 +11,7 @@ module Shell =
     let view =
         Component(fun _ ->
             DockPanel.create [
-
                 DockPanel.children [
-                    TabControl.create [ 
-                        TabControl.tabStripPlacement Dock.Top
-                        TabControl.viewItems [
-                            TabItem.create [
-                                TabItem.header "Counter Sample"
-                                TabItem.content Counter.view
-                            ]
-                            TabItem.create [
-                                TabItem.header "About"
-                                TabItem.content About.view
-                            ]
-                        ]
-                    ]
                 ]
             ]
         )
