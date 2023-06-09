@@ -23,3 +23,20 @@ linux_builds_task:
   
   test_script:
     - dotnet test
+
+########################################################################################################################
+#                                                                                                                      #
+#                                                      WINDOWS                                                         #
+#                                                                                                                      #
+########################################################################################################################
+windows_builds_task:
+  matrix:
+    - name: "windows-dotnet-7.0-x64"
+      windows_container:
+        image: mcr.microsoft.com/dotnet/sdk:7.0
+  
+  build_script:
+    - dotnet build
+  
+  test_script:
+    - dotnet test
