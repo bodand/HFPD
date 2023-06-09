@@ -1,6 +1,6 @@
 ﻿common_task_script_section: &COMMON_BUILD_SCRIPT
   build_script:
-    - dotnet build
+    - msbuild
   
   test_script:
     - dotnet test --logger:junit
