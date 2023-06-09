@@ -6,6 +6,7 @@
         <IsPackable>false</IsPackable>
         <GenerateProgramFile>true</GenerateProgramFile>
         <IsTestProject>true</IsTestProject>
+        <Platforms>AnyCPU;ARM64;x64</Platforms>
     </PropertyGroup>
 
     <ItemGroup>
