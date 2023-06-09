@@ -5,7 +5,7 @@
   test_script:
     - dotnet test --logger:junit
   
-  test_artifacts:
+  report_artifacts:
     path: "**/TestResults/**.xml"
     type: text/xml
     format: junit
