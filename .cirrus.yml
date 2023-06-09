@@ -1,4 +1,16 @@
-﻿########################################################################################################################
+﻿common_task_script_section: &COMMON_BUILD_SCRIPT
+  build_script:
+    - dotnet build
+  
+  test_script:
+    - dotnet test --logger:junit
+  
+  test_artifacts:
+    path: "**/TestResults/**.xml"
+    type: text/xml
+    format: junit
+
+########################################################################################################################
 #                                                                                                                      #
 #                                                      LINUX                                                           #
 #                                                                                                                      #
@@ -18,11 +30,7 @@ linux_builds_task:
       arm_container:
         image: mcr.microsoft.com/dotnet/sdk:7.0-alpine
   
-  build_script:
-    - dotnet build
-  
-  test_script:
-    - dotnet test
+  <<: *COMMON_BUILD_SCRIPT
 
 ########################################################################################################################
 #                                                                                                                      #
@@ -34,9 +42,5 @@ windows_builds_task:
     - name: "windows-dotnet-7.0-x64"
       windows_container:
         image: mcr.microsoft.com/dotnet/sdk:7.0
-  
-  build_script:
-    - dotnet build
-  
-  test_script:
-    - dotnet test
+        
+  <<: *COMMON_BUILD_SCRIPT
