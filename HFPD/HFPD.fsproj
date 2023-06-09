@@ -3,10 +3,8 @@
         <OutputType>WinExe</OutputType>
         <TargetFramework>net7.0</TargetFramework>
         <PublicSign>true</PublicSign>
-        <Platforms>AnyCPU;ARM64;x64</Platforms>
-    </PropertyGroup>
-    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
-      <WarningLevel>4</WarningLevel>
+        <Platforms>AnyCPU;ARM64</Platforms>
+        <Configurations>Debug;Release</Configurations>
     </PropertyGroup>
 
     <ItemGroup>
