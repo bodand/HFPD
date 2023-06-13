@@ -11,6 +11,10 @@ Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "libHF.Tests", "libHF.Tests\
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "HFPDd.Core", "HFPDd.Core\HFPDd.Core.fsproj", "{9C7B1058-2ED9-4823-9A5B-2BDBF0EC1FD8}"
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "HFPDd", "HFPDd\HFPDd.fsproj", "{26EB77BF-A23C-43F8-A5DE-1D3221B1EC8B}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "HFPDd.Tests", "HFPDd.Tests\HFPDd.Tests.fsproj", "{C456115F-6F04-488D-AE48-E9688B8D6EFD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{9C7B1058-2ED9-4823-9A5B-2BDBF0EC1FD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9C7B1058-2ED9-4823-9A5B-2BDBF0EC1FD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9C7B1058-2ED9-4823-9A5B-2BDBF0EC1FD8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26EB77BF-A23C-43F8-A5DE-1D3221B1EC8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26EB77BF-A23C-43F8-A5DE-1D3221B1EC8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26EB77BF-A23C-43F8-A5DE-1D3221B1EC8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26EB77BF-A23C-43F8-A5DE-1D3221B1EC8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C456115F-6F04-488D-AE48-E9688B8D6EFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C456115F-6F04-488D-AE48-E9688B8D6EFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C456115F-6F04-488D-AE48-E9688B8D6EFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C456115F-6F04-488D-AE48-E9688B8D6EFD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
