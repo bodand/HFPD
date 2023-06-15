@@ -12,9 +12,11 @@
         <Compile Include="ServerImplementationTests.fs" />
         <Compile Include="AsyncSocketTests.fs" />
         <Compile Include="TcpServerTests.fs" />
+        <Content Include=".gitignore" />
     </ItemGroup>
 
     <ItemGroup>
+        <PackageReference Include="JunitXml.TestLogger" Version="3.0.124" />
         <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.5.0" />
         <PackageReference Include="Moq" Version="4.18.4" />
         <PackageReference Include="xunit" Version="2.4.2" />
