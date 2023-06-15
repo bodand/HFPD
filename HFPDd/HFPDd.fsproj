@@ -7,6 +7,11 @@
 
     <ItemGroup>
         <Compile Include="ServerImplementation.fs" />
+        <Compile Include="Network\ISocket.fs" />
+        <Compile Include="Network\IAsyncSocket.fs" />
+        <Compile Include="Network\SocketAdapter.fs" />
+        <Compile Include="Network\AsyncSocket.fs" />
+        <Compile Include="Network\TcpServer.fs" />
     </ItemGroup>
 
     <ItemGroup>

@@ -1,4 +1,4 @@
-module Tests
+module HFPDd.Tests.ServerImplementationTests
 
 open System
 open System.IO
