@@ -130,5 +130,4 @@ let ``TcpServer listens on an IAsyncSocket`` () =
         run () |> ignore
         
         serverMock.Verify(fun s -> s.Close())
-        serverMock.Verify(fun s -> s.Shutdown(SocketShutdown.Both))
     }

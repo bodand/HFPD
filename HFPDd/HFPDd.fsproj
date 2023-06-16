@@ -12,6 +12,7 @@
         <Compile Include="Network\SocketAdapter.fs" />
         <Compile Include="Network\AsyncSocket.fs" />
         <Compile Include="Network\TcpServer.fs" />
+        <Compile Include="Main.fs" />
     </ItemGroup>
 
     <ItemGroup>

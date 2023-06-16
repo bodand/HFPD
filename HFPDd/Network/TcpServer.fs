@@ -55,7 +55,6 @@ type TcpServer<'baggage> =
         let impl =
             { new IDisposable with
                 member this.Dispose() =
-                    serverSocket.Shutdown(SocketShutdown.Both)
                     cts.Cancel()
                     serverSocket.Close() }
 
