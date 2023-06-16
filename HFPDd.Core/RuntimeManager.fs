@@ -3,7 +3,7 @@
 open Microsoft.FSharp.Collections
 
 type RuntimeManager() =
-    // let actionsMap = Map<string, RunStatus>
+    let mutable actionsMap = Map<string, RunStatus> []
     let mutable id: string option = None
     let mutable terminated: bool = false
 
@@ -116,3 +116,87 @@ type RuntimeManager() =
 
         if id = Some term_id then
             terminated <- true
+
+    /// <summary>
+    ///     Adds an action with its Action ID (aid) to the Runtime for later querying.
+    /// </summary>
+    /// <param name="aid">The </param>
+    /// <param name="stat"></param>
+    /// <exception cref="RuntimeTerminatedException">The runtime has already been terminated before.</exception>
+    /// <remarks>
+    ///     <list type="bullet">
+    ///         <listheader>
+    ///             <description>Preconditions</description>
+    ///         </listheader>
+    ///         <item>
+    ///             <description>The object has not yet been terminated.</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>The object does not contain the action id mapping to other status.</description>
+    ///         </item>
+    ///     </list>
+    ///     <list type="bullet">
+    ///         <listheader>
+    ///             <description>Postconditions</description>
+    ///         </listheader>
+    ///         <item>
+    ///             <description>The object contains the mapping from aid to stat.</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>The object contains all previous mappings.</description>
+    ///         </item>
+    ///     </list>
+    ///     <para>
+    ///         The Runtime will replace the aids which have been inserted prior and not removed before the call.
+    ///         Therefore, if there already is a mapping from the given aid to some status, the function does not uphold
+    ///         its postconditions.
+    ///     </para>
+    /// </remarks>
+    member x.AddFinishedAction aid stat =
+        if terminated then
+            raise (RuntimeTerminatedException id.Value)
+
+        actionsMap <- actionsMap.Add(aid, stat)
+
+    /// <summary>
+    ///     Retrieves and removes a mapping of an action id from the runtime or returns None.
+    /// </summary>
+    /// <param name="aid">The action id to search for.</param>
+    /// <exception cref="RuntimeTerminatedException">The runtime has already been terminated before.</exception>
+    /// <remarks>
+    ///     <list type="bullet">
+    ///         <listheader>
+    ///             <description>Preconditions</description>
+    ///         </listheader>
+    ///         <item>
+    ///             <description>The object has not yet been terminated.</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>The object does not contain the action id mapping to other status.</description>
+    ///         </item>
+    ///     </list>
+    ///     <list type="bullet">
+    ///         <listheader>
+    ///             <description>Postconditions</description>
+    ///         </listheader>
+    ///         <item>
+    ///             <description>The object does not contain the mapping from aid to stat.</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>The object contains all other mappings.</description>
+    ///         </item>
+    ///     </list>
+    ///     <para>
+    ///         Searches for the aid among the mappings and returns the found runtime status if it exists.
+    ///     </para>
+    /// </remarks>
+    member x.GetFinishedAction aid =
+        if terminated then
+            raise (RuntimeTerminatedException id.Value)
+
+        let stat = actionsMap.TryFind aid
+
+        stat
+        |> Option.map (fun x ->
+            actionsMap <- actionsMap.Remove aid
+            x)

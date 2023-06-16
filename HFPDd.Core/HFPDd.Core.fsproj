@@ -8,9 +8,9 @@
     <ItemGroup>
       <Compile Include="RuntimeAlreadyHasIdException.fs" />
       <Compile Include="RuntimeTerminatedException.fs" />
+      <Compile Include="RunStatus.fs" />
       <Compile Include="RuntimeManager.fs" />
       <Compile Include="ProtocolCommand.fs" />
-      <Compile Include="RunStatus.fs" />
     </ItemGroup>
 
 </Project>

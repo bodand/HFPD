@@ -56,3 +56,45 @@ let ``RuntimeManager throws if Initialize is called after Terminate`` () =
     let exc = Record.Exception(fun () -> rtm.Initialize("X"))
     Assert.IsType<RuntimeTerminatedException>(exc) |> ignore
     Assert.True(rtm.Terminated)
+
+[<Fact>]
+let ``RuntimeManager can store a finalized action`` () =
+    let rtm = RuntimeManager()
+    rtm.Initialize("X")
+    let exc = Record.Exception(fun () -> rtm.AddFinishedAction "id" (Failure "msg"))
+    Assert.Null(exc)
+
+[<Fact>]
+let ``RuntimeManager after termination cannot store a finalized action`` () =
+    let rtm = RuntimeManager()
+    rtm.Initialize("X")
+    rtm.Terminate("X")
+    let exc = Record.Exception(fun () -> rtm.AddFinishedAction "id" (Failure "msg"))
+    Assert.Equal(Assert.IsType<RuntimeTerminatedException>(exc).id, "X")
+
+[<Fact>]
+let ``RuntimeManager can retrieve a finalized action`` () =
+    let rtm = RuntimeManager()
+    rtm.Initialize("X")
+    rtm.AddFinishedAction "id" (Failure "msg")
+    let s = rtm.GetFinishedAction "id" 
+    Assert.NotEqual(None, s)
+
+[<Fact>]
+let ``RuntimeManager can only retrieve the finalized action once for a given id`` () =
+    let rtm = RuntimeManager()
+    rtm.Initialize("X")
+    rtm.AddFinishedAction "id" (Failure "msg")
+    let s = rtm.GetFinishedAction "id" 
+    Assert.NotEqual(None, s)
+    let s = rtm.GetFinishedAction "id" 
+    Assert.Equal(None, s)
+
+[<Fact>]
+let ``RuntimeManager after termination cannot retrieve a finalized action`` () =
+    let rtm = RuntimeManager()
+    rtm.Initialize("X")
+    rtm.AddFinishedAction "id" (Failure "msg")
+    rtm.Terminate("X")
+    let exc = Record.Exception(fun () -> rtm.GetFinishedAction "id" |> ignore)
+    Assert.Equal(Assert.IsType<RuntimeTerminatedException>(exc).id, "X")
