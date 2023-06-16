@@ -25,11 +25,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{2C69101A
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HFPD", "HFPD", "{B507C9A2-EA38-453A-88A1-169D87EE4E65}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "HFPDd.Core.Tests", "HFPDd\HFPDd.Core.Tests\HFPDd.Core.Tests.fsproj", "{85BA2C45-BF52-4120-865A-40BC3272DFC2}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "HFPDd.Core.Tests", "HFPDd.Core.Tests\HFPDd.Core.Tests.fsproj", "{85BA2C45-BF52-4120-865A-40BC3272DFC2}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "HFPDd.Protocol", "HFPDd\HFPDd.Protocol\HFPDd.Protocol.fsproj", "{24165E25-A0C3-41F0-B998-E7207A876E73}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "HFPDd.Protocol", "HFPDd.Protocol\HFPDd.Protocol.fsproj", "{24165E25-A0C3-41F0-B998-E7207A876E73}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "HFPDd.Protocol.Tests", "HFPDd\HFPDd.Protocol.Tests\HFPDd.Protocol.Tests.fsproj", "{81DAFD93-44D6-419E-BC7C-9E7F2531A739}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "HFPDd.Protocol.Tests", "HFPDd.Protocol.Tests\HFPDd.Protocol.Tests.fsproj", "{81DAFD93-44D6-419E-BC7C-9E7F2531A739}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

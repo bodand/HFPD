@@ -28,7 +28,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\HFPDd.Core\HFPDd.Core.fsproj" />
+      <ProjectReference Include="..\HFPDd.Core\HFPDd.Core.fsproj" />
     </ItemGroup>
 
 </Project>
