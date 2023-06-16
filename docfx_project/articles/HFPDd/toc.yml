@@ -1,0 +1,7 @@
+﻿- name: HFPDd
+- name: The HFPDd plugin system
+  href: plugins.md
+
+- name: Default plugins
+- name: HDCP
+  href: plugins/HDCP.md

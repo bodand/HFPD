@@ -1,9 +1,8 @@
-﻿namespace HFPDd
+﻿namespace HFPDd.Network
 
 open System
 open System.ComponentModel
 open System.Net.Sockets
-open HFPDd.Network
 
 open System.Text
 open System.Threading

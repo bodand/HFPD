@@ -1,4 +1,4 @@
-﻿namespace HFPDd
+﻿namespace HFPDd.Network
 
 open System
 open System.Threading.Tasks

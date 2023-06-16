@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\HFPDd.Core\HFPDd.Core.fsproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Include="Action\IAction.fs" />
+      <Compile Include="Action\IActionFactory.fs" />
+      <Compile Include="Action\IActionLoader.fs" />
+      <Compile Include="Action\IActionInjector.fs" />
+      <Compile Include="IActionRegistry.fs" />
+      <Compile Include="Protocol\ParsingStatus.fs" />
+      <Compile Include="Protocol\IProtocol.fs" />
+      <Compile Include="Protocol\IProtocolFactory.fs" />
+      <Compile Include="Protocol\IProtocolLoader.fs" />
+      <Compile Include="Protocol\IProtocolInjector.fs" />
+      <Compile Include="IProtocolRegistry.fs" />
+      <Compile Include="PluginManager.fs" />
+    </ItemGroup>
+
+</Project>

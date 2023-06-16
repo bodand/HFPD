@@ -3,7 +3,7 @@ module HFPDd.Tests.ServerImplementationTests
 open System
 open System.IO
 open System.Threading.Tasks
-open HFPDd
+open HFPDd.Network
 open Xunit
 
 [<Fact>]
