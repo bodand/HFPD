@@ -9,7 +9,8 @@
             "**/bin/**/HFPD*.dll"
           ],
           "exclude": [
-            "**Tests.dll"
+            "**Tests.dll",
+            "**.Tests/**"
           ]
         }
       ],

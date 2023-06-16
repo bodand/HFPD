@@ -24,6 +24,7 @@
 
     <ItemGroup>
       <Compile Include="RuntimeManagerTests.fs" />
+      <Compile Include="RunStatusTests.fs" />
     </ItemGroup>
 
     <ItemGroup>
